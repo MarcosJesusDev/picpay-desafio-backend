@@ -11,7 +11,11 @@ public record CrateWalletDto (String fullName,
 
     public Wallet toWallet(){
         return new Wallet(
-
+                fullName,
+                cpfCnpj,
+                email,
+                password,
+                walletType.get()
         );
     }
 }
